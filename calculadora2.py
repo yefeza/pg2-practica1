@@ -3,49 +3,35 @@ import math
 
 # Clase base que representa una calculadora simple (Abstracción)
 class Calculadora:
-    def __init__(self, a, b):
+    def __init__(self):
         self.__resultado = 0
-        self.a = a
-        self.b = b
         self.operacion = ""
 
-    def sumar(self):
+    def sumar(self, a, b):
         self.operacion = "Suma"
-        self.__resultado = self.a + self.b
-        return self._mostrar_operacion()
+        self.__resultado = a + b
+        return self._mostrar_operacion(a, b)
 
-    def restar(self):
+    def restar(self, a, b):
         self.operacion = "Resta"
-        self.__resultado = self.a - self.b
-        return self._mostrar_operacion()
+        self.__resultado = a - b
+        return self._mostrar_operacion(a, b)
 
-    def multiplicar(self):
+    def _multiplicar(self, a, b):
+        return a * b
+
+    def multiplicar(self, a, b):
         self.operacion = "Multiplicar"
-        self.__resultado = self.a * self.b
-        return self._mostrar_operacion()
+        self.__resultado = self._multiplicar(a, b)
+        return self._mostrar_operacion(a, b)
 
-    def dividir(self):
+    def dividir(self, a, b):
         self.operacion = "Dividir"
-        if self.b != 0:
-            self.__resultado = self.a / self.b
-            return self._mostrar_operacion()
+        if b != 0:
+            self.__resultado = a / b
+            return self._mostrar_operacion(a, b)
         else:
             return "Error: División por cero"
 
-    def _mostrar_operacion(self):
-        return f"{self.operacion}: {self.a} y {self.b} = {self.__resultado}"
-
-
-calculadora_1 = Calculadora(15, 5)
-
-print(calculadora_1.sumar())
-
-calculadora_2 = Calculadora(20, 5)
-
-print(calculadora_2.restar())
-calculadora_3 = Calculadora(20, 5)
-
-print(calculadora_3.multiplicar())
-calculadora_4 = Calculadora(20, 5)
-
-print(calculadora_4.dividir())
+    def _mostrar_operacion(self, a, b):
+        return f"{self.operacion}: {a} y {b} = {self.__resultado}"
