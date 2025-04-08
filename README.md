@@ -38,7 +38,7 @@ source env/bin/activate
 4. Ejecutar el script:
 
 ```bash
-python calculadora_poo.py
+python main.py
 ```
 
 5. Desactivar el entorno virtual:
