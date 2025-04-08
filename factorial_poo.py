@@ -1,4 +1,4 @@
-from calculadora2 import Calculadora
+from calculadora_poo import Calculadora
 
 
 class CalculadoraFactorial(Calculadora):
