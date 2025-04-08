@@ -6,7 +6,46 @@ operaciones aritméticas básicas como suma, resta, multiplicación y división.
 Del mismo modo, se implementa una calculadora de factorial que aplica principios
 de herencia y polimorfismo.
 
-## Preparación del entorno
+## Preparación del entorno y ejecución
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/yefeza/pg2-practica1.git
+cd pg2-practica1
+```
+
+2. Crear un entorno virtual:
+
+```bash
+python -m venv env
+```
+
+3. Activar el entorno virtual:
+
+- En Windows:
+
+```bash
+.\env\Scripts\activate
+```
+
+- En Linux o Mac:
+
+```bash
+source env/bin/activate
+```
+
+4. Ejecutar el script:
+
+```bash
+python calculadora_poo.py
+```
+
+5. Desactivar el entorno virtual:
+
+```bash
+deactivate
+```
 
 ## Implementacion Calculadora Estandar
 
